@@ -28,6 +28,7 @@
       "SharedArrayBuffer": "readonly"
     },
     "rules": {
+      "no-empty-interface": 0,
       "linebreak-style": "off",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
