@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MobileMenuOverlay from '../MobileMenuOverlay/MobileMenuOverlay';
 import {
+  NavBarContainer,
   NavBarDesktopContainer,
   ProfileContainer,
   NavSectionsContainer,
@@ -21,8 +22,14 @@ export const NavBar: React.FC<any> = () => {
     window.matchMedia(`(min-width: 768px)`).matches
   );
 
+  const openOverlay = () => {
+    setOpenedMobileMenuOverlay(true);
+    document.querySelector('html')!.style.overflow = 'hidden';
+  };
+
   const closeOverlay = () => {
     setOpenedMobileMenuOverlay(false);
+    document.querySelector('html')!.style.overflow = 'unset';
   };
 
   const setDeviceType = () =>
@@ -36,7 +43,7 @@ export const NavBar: React.FC<any> = () => {
   }, []);
 
   return (
-    <>
+    <NavBarContainer>
       <NavBarDesktopContainer navBarItemIsHovered={navBarItemIsHovered}>
         <ProfileContainer>
           <img src="https://avatars.githubusercontent.com/u/44037760?v=4" alt="profile-photo" />
@@ -63,7 +70,7 @@ export const NavBar: React.FC<any> = () => {
         <HamburgerButton
           openedMobileMenu={openedMobileMenuOverlay}
           type="button"
-          onClick={() => setOpenedMobileMenuOverlay(true)}
+          onClick={() => openOverlay()}
         >
           <span></span>
           <span></span>
@@ -73,7 +80,7 @@ export const NavBar: React.FC<any> = () => {
         openedMobileMenuOverlay={openedMobileMenuOverlay}
         closeOverlay={closeOverlay}
       />
-    </>
+    </NavBarContainer>
   );
 };
 

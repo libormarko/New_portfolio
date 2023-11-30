@@ -25,6 +25,12 @@ const squashIconUp = keyframes`
     }
     `;
 
+export const NavBarContainer = styled.div`
+  position: fixed;
+  top: 0;
+  width: 100vw;
+`;
+
 export const NavBarDesktopContainer = styled.div<{ navBarItemIsHovered: string | null }>`
   background-color: ${(props) =>
     props.navBarItemIsHovered ? variables.colorBlack : variables.colorGrey30};
@@ -104,18 +110,18 @@ export const HamburgerButton = styled.button<{ openedMobileMenu: boolean }>`
   opacity: 1;
   position: relative;
   background-color: unset;
-  width: 24px;
+  width: 20px;
   border-width: 0;
 
   > span {
     background: #f5f5f7;
     border-radius: 0.25rem;
     display: block;
-    height: 0.125rem;
+    height: 0.11rem;
     left: 0;
     position: absolute;
-    transition: all 0.3s cubic-bezier(0.3, 0, 0, 1);
-    width: 1.5rem;
+    transition: top 0.3s cubic-bezier(0.3, 0, 0, 1);
+    width: 1.2rem;
   }
 
   > span:first-child {

@@ -25,6 +25,7 @@ export const CloseButton = styled.button`
   width: fit-content;
   border-width: 0;
   padding-right: ${variables.spacingL};
+  padding-left: 0;
 `;
 
 export const ProfileContainer = styled.li`
@@ -68,7 +69,7 @@ export const StyledList = styled.ul<{ openedMobileMenuOverlay: boolean }>`
       transition-delay: ${(props) => (props.openedMobileMenuOverlay ? '0.30s' : '0s')};
     }
     &:nth-child(2) {
-      margin-top: ${variables.spacingXL};
+      margin-top: ${variables.spacingXXXXL};
       transition-delay: ${(props) => (props.openedMobileMenuOverlay ? '0.40s' : '0s')};
     }
     &:nth-child(3) {
