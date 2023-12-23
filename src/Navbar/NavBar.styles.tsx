@@ -25,26 +25,38 @@ const squashIconUp = keyframes`
     }
     `;
 
-export const NavBarContainer = styled.div`
+export const NavBarWrapper = styled.div`
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 2;
+  backdrop-filter: blur(8px);
 `;
 
 export const NavBarDesktopContainer = styled.div<{ navBarItemIsHovered: string | null }>`
   background-color: ${(props) =>
     props.navBarItemIsHovered ? variables.colorBlack : variables.colorGrey30};
-  display: none;
   align-items: center;
   transition: background-color 0.5s cubic-bezier(0.3, 0, 0, 1);
   height: 44px;
+`;
+
+export const WidthContainer = styled.div`
+  max-width: 1824px;
+  margin: 0 auto;
+  align-items: center;
   grid-template-columns: 1fr min-content;
-  padding: 0 ${variables.spacingXXXXL};
+  display: none;
+  padding: 0 ${variables.spacing3XL};
 
   @media only screen and (min-width: ${variables.breakpointM}px) {
     display: grid;
   }
 `;
+
+export const ProfileName = styled.p``;
+
+export const ProfileImage = styled.img``;
 
 export const ProfileContainer = styled.div`
   height: 40px;

@@ -2,7 +2,7 @@ import styled, { css, keyframes } from 'styled-components';
 import * as variables from '../variables';
 
 export const TagWrapper = styled.span`
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   background-color: ${variables.colorBlue};
   width: fit-content;

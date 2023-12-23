@@ -2,12 +2,12 @@ import React from 'react';
 import {
   AboutWrapper,
   GetToKnowMe,
-  Text,
+  AboutText,
   SkillsAndExperience,
   Skills,
   IndustryExperience,
   IndustryExperienceTagsWrapper,
-  Headline,
+  AboutHeadline,
   SkillTagsWrapper
 } from './About.styles';
 import Tag from '../Tag/Tag';
@@ -31,16 +31,12 @@ export const skillLabels = [
   'Responsive Web Design'
 ];
 
-/* export interface AboutProps {
-} */
-
 export const About: React.FC<any> = ({}) => {
-  const label = 'baf;';
   return (
     <AboutWrapper id="About">
       <GetToKnowMe>
-        <Headline>Get to know me</Headline>
-        <Text>
+        <AboutHeadline>Get to know me</AboutHeadline>
+        <AboutText>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -59,10 +55,10 @@ export const About: React.FC<any> = ({}) => {
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.
           </p>
-        </Text>
+        </AboutText>
       </GetToKnowMe>
       <Skills>
-        <Headline>My skills</Headline>
+        <AboutHeadline>My skills</AboutHeadline>
         <SkillTagsWrapper>
           {skillLabels.map((skill, index) => {
             return <Tag key={index} label={skill} />;

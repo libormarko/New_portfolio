@@ -14,9 +14,9 @@ export const spacingM = '16px';
 export const spacingL = '24px';
 export const spacingXL = '28px';
 export const spacingXXL = '36px';
-export const spacingXXXL = '48px';
-export const spacingXXXXL = '80px';
-export const spacingXXXXXL = '100px';
+export const spacing3XL = '48px';
+export const spacing4XL = '80px';
+export const spacing5XL = '100px';
 
 export const breakpointXS = 0;
 export const breakpointS = 375;

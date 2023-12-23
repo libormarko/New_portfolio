@@ -42,7 +42,7 @@ export const ProfileContainer = styled.li`
     color: ${variables.colorGrey00};
     margin-left: ${variables.spacingM};
     cursor: default;
-    font-size: 18px;
+    font-size: 20px;
   }
 `;
 
@@ -52,6 +52,7 @@ export const StyledList = styled.ul<{ openedMobileMenuOverlay: boolean }>`
   justify-content: flex-start;
   align-items: center;
   padding: 0;
+  margin-top: 35%;
 
   li {
     margin-bottom: ${variables.spacingXXL};
@@ -69,7 +70,7 @@ export const StyledList = styled.ul<{ openedMobileMenuOverlay: boolean }>`
       transition-delay: ${(props) => (props.openedMobileMenuOverlay ? '0.30s' : '0s')};
     }
     &:nth-child(2) {
-      margin-top: ${variables.spacingXXXXL};
+      margin-top: ${variables.spacingXL};
       transition-delay: ${(props) => (props.openedMobileMenuOverlay ? '0.40s' : '0s')};
     }
     &:nth-child(3) {
@@ -89,6 +90,6 @@ export const StyledList = styled.ul<{ openedMobileMenuOverlay: boolean }>`
     background-color: unset;
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 20px;
   }
 `;
