@@ -45,6 +45,7 @@ export const WidthContainer = styled.div`
   max-width: 1824px;
   margin: 0 auto;
   align-items: center;
+  height: 100%;
   grid-template-columns: 1fr min-content;
   display: none;
   padding: 0 ${variables.spacing3XL};
